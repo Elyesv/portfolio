@@ -13,6 +13,10 @@
   --blue-text-color: #287BDE;
 }
 
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+
 .loading{
   background-color: var(--main-bg-color);
   width: 100%;
@@ -57,11 +61,17 @@
   height: 100px;
   width: 100%;
   z-index: 99;
+  @include for-phone-only{
+    justify-content: center;
+  }
 
   &-logo{
     width: 40px;
     height: 40px;
     border: 1px solid black;
+    @include for-phone-only{
+      display: none;
+    }
   }
 
   &-link{
@@ -89,6 +99,9 @@
   position: fixed;
   bottom: 0px;
   left: 40px;
+  @include for-phone-only{
+    display: none;
+  }
 
   &-list{
     display: flex;
@@ -104,6 +117,7 @@
     &-element:hover{
       transform: translateY(-3px);
     }
+
     &-element > a > svg > path{
       fill: var(--main-text-color);
     }
@@ -129,3 +143,4 @@ a{
   color: var(--main-text-color);
   text-decoration: none;
 }
+
