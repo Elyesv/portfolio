@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="style/style.css">
     <title>Elyes Voisin</title>
     <script src="https://kit.fontawesome.com/50fb19e5c3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 <body>
     <!-- If this look familiar it's normal. I used php storm's color :p-->
     <header>
-        <nav class="navbar">
+        <nav class="navbar" data-aos="fade-down" data-aos-duration="2200">
             <div class="navbar-logo">Elyes VOISIN</div>
             <div class="navbar-link">
                 <ul class="navbar-link-list">
@@ -35,7 +37,7 @@
             <span class="loading-text-letter">G</span>
         </div>
     </div>
-    <div class="social">
+    <div class="social" data-aos="fade-right" data-aos-duration="2300">
         <ul class="social-list">
             <li class="social-list-element">
                 <a href="https://github.com/Elyesv" target="_blank">
@@ -49,7 +51,7 @@
             </li>
         </ul>
     </div>
-    <div id="home">
+    <div id="home" data-aos="zoom-in" data-aos-duration="2200">
         <div class="content-head">
             <h1>Welcome everyone,</h1>
             <h2>My name is <span>Elyes Voisin</span></h2>
@@ -138,5 +140,10 @@
 
     </div>
     <script src="script/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 </html>
