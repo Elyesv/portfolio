@@ -20,11 +20,11 @@
 }
 
 @mixin for-phone-only {
-  @media (max-width: 599px) { @content; }
+  @media screen and (max-width: 599px) { @content; }
 }
 
 @mixin for-tablet {
-  @media (max-width: 1099px) { @content; }
+  @media screen and (max-width: 1099px) { @content; }
 }
 
 .loading{
@@ -663,4 +663,21 @@ a{
   }
 }
 
+
+#contact{
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 200px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  @include for-phone-only{
+    padding: 0 20px;
+  }
+
+  & > .content > .content-title{
+    grid-template-columns: 3fr 8fr;
+  }
+}
 
