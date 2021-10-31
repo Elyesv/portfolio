@@ -19,4 +19,14 @@ setTimeout(function () {
 
 
 
+var previous_pos = window.pageYOffset;
+window.onscroll = function() {
+    var current_pos = window.pageYOffset;
+    if (previous_pos > current_pos) {
+        document.getElementsByClassName("navbar")[0].style.top = "0";
+    } else {
+        document.getElementsByClassName("navbar")[0].style.top = "-150px";
+    }
+    previous_pos = current_pos;
+}
 
